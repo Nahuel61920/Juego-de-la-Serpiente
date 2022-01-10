@@ -5,10 +5,10 @@ const STATE_RUNNING = 1;
 const STATE_LOSING = 2;
 
 const TICK = 80;
-const SQUARE_SIZE = 10;
-const BOARD_WIDTH = 50;
-const BOARD_HEIGHT = 50;
-const GROW_SCALE = 10;
+const SQUARE_SIZE = 16;
+const BOARD_WIDTH = 37;
+const BOARD_HEIGHT = 37;
+const GROW_SCALE = 1;
 const DIRECTIONS_MAP = {
   'A': [-1,  0],
   'D': [ 1,  0],
@@ -131,7 +131,7 @@ let state = {
   }
 
   function draw() {
-    state.context.clearRect(0, 0, 500, 500);
+    state.context.clearRect(0, 0, 590, 590);
 
     for (var idx = 0; idx < state.snake.length; idx++) {
       const {x, y} = state.snake[idx];
